@@ -31,7 +31,7 @@ vault/
 ├── outputs/              # Deliverables you produce: reports, exports, drafts
 ├── templates/            # Blank note templates — copy, don't edit in place
 ├── daily_notes/          # Optional daily journal (YYYY-MM-DD.md)
-├── CLAUDE.md             # Operating manual for an AI assistant (optional but powerful)
+├── AGENTS.md             # Operating manual for an AI assistant (optional but powerful)
 └── log.md                # One line per change: date | actor | action | files
 ```
 
@@ -130,7 +130,8 @@ The test of a good status file: **a person who has never seen the project reads 
 
 The vault is designed so an AI assistant can work inside it safely:
 
-- **[CLAUDE.md](CLAUDE.md)** is the operating manual the assistant reads first, every session. It encodes the rules above so the system maintains itself.
+- **[AGENTS.md](AGENTS.md)** is the operating manual the assistant reads first, every session. It encodes the rules above so the system maintains itself.
+- It works with **any AI tool**: `AGENTS.md` is the cross-tool standard (Codex, Cursor, Windsurf, …), and `CLAUDE.md` (Claude Code), `GEMINI.md` (Gemini CLI), and `.github/copilot-instructions.md` (GitHub Copilot) are one-line pointers to it — one manual, every assistant.
 - The assistant answers questions from `wiki/` pages (cheap, short) instead of re-reading raw files (expensive, long).
 - The per-project status/decisions/changelog files let an assistant resume your project cold, with zero questions.
 
@@ -142,7 +143,7 @@ No AI? Everything still works — the manual is just as useful as a human checkl
 
 1. Use this template (or clone it) and rename the category folders to fit your field.
 2. Solve one problem and run the learning loop once: capture → distill → connect.
-3. Add your own rules to [CLAUDE.md](CLAUDE.md) as you learn — when something goes wrong in your workflow, capture the prevention as a numbered rule. The vault improves itself this way.
+3. Add your own rules to [AGENTS.md](AGENTS.md) as you learn — when something goes wrong in your workflow, capture the prevention as a numbered rule. The vault improves itself this way.
 
 Everything compounds from there.
 
