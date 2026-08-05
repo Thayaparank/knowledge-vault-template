@@ -95,6 +95,7 @@ The hub (`wiki/projects/<project>.md`) holds the stable reference: background, k
 - Use consistent headings: `## Situation`, `## Root cause`, `## Resolution`, `## Why it works`, `## Related`, `## Sources`.
 - Never embed huge dumps in wiki pages — link to `raw/` instead.
 - Search `wiki/` before `raw/`; return the wiki link, not a full restatement.
+- Full cost-saving practices: [token-efficiency.md](token-efficiency.md) — follow it in every session.
 
 ---
 
