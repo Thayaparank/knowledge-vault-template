@@ -50,6 +50,9 @@ These rules apply in every session.
 10. **No noise.** If a note doesn't teach something reusable, it belongs in `raw/` or `daily_notes/`, not `wiki/`.
 11. **No secrets in the vault.** Passwords, keys, tokens, and account numbers live outside; reference them as `<SECRET: name>` placeholders. If a live secret is found in a file, flag it for removal immediately.
 12. **Checkpoint before stopping.** Never end a session with unsaved state — update the project status file (with an exact resume pointer), record decisions, append changelog and log lines. A brand-new session reading the status page must be able to continue with zero questions.
+13. **Token efficiency.** Follow [token-efficiency.md](token-efficiency.md) in every session: reference paths instead of pasting, one task per conversation, search narrow (never whole-vault scans), grep the log. If the owner does something token-wasteful, point out the cheaper alternative once — then do the work anyway.
+
+**Developers:** an optional add-on with engineering rules for AI-assisted coding (layered architecture, approval gates, delegation supervision, git discipline, QA walks) lives in [engineering-rules.md](engineering-rules.md) — adopt it or delete it.
 
 ---
 
@@ -89,7 +92,27 @@ The hub (`wiki/projects/<project>.md`) holds the stable reference: background, k
 
 ---
 
-## 7. Optimization for Retrieval
+## 7. Rules Hierarchy — this vault and your project repos
+
+Rules live at levels; a lower level may **add to or specialize** a higher one — never cancel it.
+
+1. **This manual (AGENTS.md)** — the one home for every general rule. It applies in every
+   session, in every repo. General rules are never copied anywhere else.
+2. **Assistant memory** (if your tool has one) — only learnings *not yet* promoted into this
+   manual. When a learning becomes a rule here, delete the memory copy — a rule stated in two
+   always-loaded places will eventually say two different things.
+3. **Each project repo's own `CLAUDE.md`/`AGENTS.md`** — a lightweight **router**: what the
+   repo is, stack, commands, pointers back to this vault, plus rules that exist ONLY for that
+   project. Start it from [templates/project-claude-md-template.md](templates/project-claude-md-template.md)
+   in the repo's first commit. It never restates general rules and never holds status.
+4. **Continuation files** (`-status` / `-decisions` / `-changelog`) — volatile per-project state.
+
+Two habits keep this conflict-free: **date every rule** (newest dated statement wins), and
+**treat a found conflict as a bug** — fix it at its source the moment it's spotted.
+
+---
+
+## 8. Optimization for Retrieval
 
 - Lead every wiki page with a one-line `summary:` in the front-matter and a `tags:` list.
 - Use consistent headings: `## Situation`, `## Root cause`, `## Resolution`, `## Why it works`, `## Related`, `## Sources`.
@@ -99,7 +122,7 @@ The hub (`wiki/projects/<project>.md`) holds the stable reference: background, k
 
 ---
 
-## 8. Make It Yours
+## 9. Make It Yours
 
 This manual is a starting point. When something goes wrong in your workflow, add the prevention here as a new numbered rule — dated, with one line on why. That habit is what turns a folder of notes into a system that improves itself.
 
