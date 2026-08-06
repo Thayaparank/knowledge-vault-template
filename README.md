@@ -32,6 +32,8 @@ vault/
 ├── templates/            # Blank note templates — copy, don't edit in place
 ├── daily_notes/          # Optional daily journal (YYYY-MM-DD.md)
 ├── AGENTS.md             # Operating manual for an AI assistant (optional but powerful)
+├── token-efficiency.md   # Cost practices for working with AI assistants cheaply
+├── engineering-rules.md  # Optional add-on: rules for AI-assisted coding (delete if not a developer)
 └── log.md                # One line per change: date | actor | action | files
 ```
 
@@ -134,6 +136,9 @@ The vault is designed so an AI assistant can work inside it safely:
 - It works with **any AI tool**: `AGENTS.md` is the cross-tool standard (Codex, Cursor, Windsurf, …), and `CLAUDE.md` (Claude Code), `GEMINI.md` (Gemini CLI), and `.github/copilot-instructions.md` (GitHub Copilot) are one-line pointers to it — one manual, every assistant.
 - The assistant answers questions from `wiki/` pages (cheap, short) instead of re-reading raw files (expensive, long).
 - The per-project status/decisions/changelog files let an assistant resume your project cold, with zero questions.
+- **[token-efficiency.md](token-efficiency.md)** keeps AI-assisted work cheap: reference file paths instead of pasting, one task per conversation, narrow searches instead of whole-vault scans.
+- **Rules stay conflict-free through a hierarchy** (AGENTS.md §7): the manual is the one home for general rules; each project repo gets only a small **router** file — start it from [templates/project-claude-md-template.md](templates/project-claude-md-template.md) — that points back to the vault and adds project-only rules, never copies.
+- **Developers:** [engineering-rules.md](engineering-rules.md) is an optional add-on with rules for AI-assisted coding (architecture posture, approval gates, delegation supervision, git discipline). Adopt it or delete it.
 
 No AI? Everything still works — the manual is just as useful as a human checklist.
 
