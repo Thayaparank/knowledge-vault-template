@@ -75,6 +75,11 @@ Write a UI-based acceptance scenario **with the spec, before the build** — ste
 clicks, with the exact expected on-screen result per step. A feature shipped without its
 walk isn't done. Defects found by a walk get a recorded root cause, never just "fixed".
 
+A blank scenario ready to copy:
+[templates/qa-test-scenario-template.md](templates/qa-test-scenario-template.md) — one row
+per click, failure paths, permission variants, a theme/responsive matrix, and a per-step
+pass/fail record.
+
 ## 7. Database changes are releases, not edits
 
 Every schema change ships as a committed, ordered, immutable migration/release script
@@ -87,4 +92,5 @@ Keep a schema snapshot and a one-entry-per-release changelog beside the scripts.
 
 - [AGENTS.md](AGENTS.md) — the vault's general operating manual (§7 rules hierarchy)
 - [templates/project-claude-md-template.md](templates/project-claude-md-template.md) — per-repo router file
+- [templates/qa-test-scenario-template.md](templates/qa-test-scenario-template.md) — acceptance-scenario blank for rule 6
 - [token-efficiency.md](token-efficiency.md) — cost practices

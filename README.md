@@ -138,7 +138,7 @@ The vault is designed so an AI assistant can work inside it safely:
 - The per-project status/decisions/changelog files let an assistant resume your project cold, with zero questions.
 - **[token-efficiency.md](token-efficiency.md)** keeps AI-assisted work cheap: reference file paths instead of pasting, one task per conversation, narrow searches instead of whole-vault scans.
 - **Rules stay conflict-free through a hierarchy** (AGENTS.md §7): the manual is the one home for general rules; each project repo gets only a small **router** file — start it from [templates/project-claude-md-template.md](templates/project-claude-md-template.md) — that points back to the vault and adds project-only rules, never copies.
-- **Developers:** [engineering-rules.md](engineering-rules.md) is an optional add-on with rules for AI-assisted coding (architecture posture, approval gates, delegation supervision, git discipline). Adopt it or delete it.
+- **Developers:** [engineering-rules.md](engineering-rules.md) is an optional add-on with rules for AI-assisted coding (architecture posture, approval gates, delegation supervision, git discipline, UI-based acceptance testing). [templates/qa-test-scenario-template.md](templates/qa-test-scenario-template.md) is the blank acceptance scenario those rules call for — written with the spec, before the build. Adopt them or delete them.
 
 No AI? Everything still works — the manual is just as useful as a human checklist.
 
