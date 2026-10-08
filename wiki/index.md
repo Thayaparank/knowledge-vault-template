@@ -11,5 +11,11 @@
 ## Troubleshooting
 *(none yet)*
 
+## Decisions
+*(none yet)*
+
+## Prompts
+*(none yet)*
+
 ## Projects
 *(none yet)*

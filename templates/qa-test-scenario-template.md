@@ -72,7 +72,8 @@ never a blank screen).
 
 ## 7. Theme & responsive matrix
 
-Mandatory for any visual change.
+Mandatory for any visual change in a screen-based UI. Adjust the themes and widths to the
+ones your product supports; delete this section if the feature has no screen.
 
 | Surface | Light | Dark | 375 | 768 | 1280 |
 |---|---|---|---|---|---|

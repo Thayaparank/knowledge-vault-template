@@ -1,0 +1,19 @@
+# Secrets — a backstop for "No secrets in the vault" (AGENTS.md rule 11)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+secrets/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Per-device editor state (e.g. Obsidian)
+.obsidian/workspace*.json
+.obsidian/cache
+*.swp

@@ -1,6 +1,8 @@
 ---
 summary: <one line — the symptom this flow diagnoses>
 tags: [<keyword>, <keyword>]
+queries:  # optional — 2–3 phrasings a future search would type; exact error text beats solution words
+  - "<the error message or symptom as it appears>"
 ---
 
 # <Symptom as the title>

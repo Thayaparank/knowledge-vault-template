@@ -21,5 +21,8 @@ tags: [prompt, <keyword>]
 ## Notes
 <What makes this prompt work; variations tried and rejected.>
 
+## Related
+- [<related page>](<relative path>)
+
 ## Sources
 - [original use](../../raw/conversations/<path>)

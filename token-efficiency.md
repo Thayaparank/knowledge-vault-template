@@ -32,7 +32,7 @@
 
 ## 6. Reuse instead of re-explaining
 
-- Recurring instructions become **prompt templates** in `templates/` — parameterized once, reused forever.
+- Recurring instructions become **prompt pages** in `wiki/prompts/` (start from `templates/ai-prompt-template.md`) — parameterized once, reused forever.
 - Standing rules live in `AGENTS.md` — stated once, loaded every session, never re-typed.
 
 ## 7. Checkpoint so resuming is cheap
@@ -42,5 +42,5 @@
 ---
 
 ## Related
-- [AGENTS.md](AGENTS.md) — §7 Optimization for Retrieval
+- [AGENTS.md](AGENTS.md) — §8 Optimization for Retrieval
 - [README.md](README.md) — the two-layer structure these practices depend on

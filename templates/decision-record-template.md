@@ -21,5 +21,8 @@ tags: [decision, <keyword>]
 ## Consequences
 <What this makes easier, what it makes harder, what to revisit if the premise changes.>
 
+## Related
+- [<related page>](<relative path>)
+
 ## Sources
 - [<raw evidence>](../../raw/<path>)

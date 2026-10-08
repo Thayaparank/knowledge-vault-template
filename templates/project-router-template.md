@@ -1,12 +1,15 @@
-<!-- TEMPLATE: repo CLAUDE.md — lightweight session router.
-Copy into the project repo root as CLAUDE.md in the FIRST commit.
+<!-- TEMPLATE: project repo router — lightweight session router.
+Copy into the project repo root in the FIRST commit, named for the file your AI tool reads:
+AGENTS.md (cross-tool), CLAUDE.md (Claude Code), GEMINI.md (Gemini CLI), or
+.github/copilot-instructions.md (GitHub Copilot). Use one file; make any others one-line pointers to it.
 Fill every <angle-bracket> slot; DELETE any section that doesn't apply.
 RULES OF THIS FILE: router only. General rules live in the vault's operating manual
-(loaded automatically every session) — NEVER copy them here. Architecture and decisions
-live in the vault — link, don't restate. This file may ADD project-specific rules or
-SPECIALIZE vault rules; it may never cancel one. Target: under ~50 lines. -->
+(<vault>/AGENTS.md) — NEVER copy them here. The vault manual is only read if your tool is
+told to read it: see the vault README → "Connect your project repos". Architecture and
+decisions live in the vault — link, don't restate. This file may ADD project-specific rules
+or SPECIALIZE vault rules; it may never cancel one. Target: under ~50 lines. -->
 
-# CLAUDE.md — <ProjectName> (<one-word repo type: product monorepo / API / tool>)
+# <ProjectName> (<one-word repo type: product monorepo / API / tool>)
 
 > Read this first, every session. This is a **lightweight router only** — it contains no
 > architecture and no decisions. Those live in the vault (`<path-to-your-vault>`), the
@@ -17,7 +20,7 @@ SPECIALIZE vault rules; it may never cancel one. Target: under ~50 lines. -->
 - `<folder>/` — <stack piece>; setup: `<command>`
 
 ## Sources of truth — read before non-trivial work
-- `<vault>/CLAUDE.md` — general rules (auto-loaded; the contract).
+- `<vault>/AGENTS.md` — general rules (the contract). Read it at session start unless your tool already loads it.
 - `<vault>/wiki/projects/<project>.md` — project hub (architecture, links).
 - `<vault>/wiki/projects/<project>-status.md` — current state + NEXT pointer. **Read first when resuming.**
 - `<vault>/wiki/projects/<project>-decisions.md` — locked/open decisions.
