@@ -114,7 +114,7 @@ Each active project gets **four small files** in `wiki/projects/`:
 | File | Holds | Changes |
 |---|---|---|
 | `<project>.md` | The hub: background, key facts, links to raw sources and related pages | Rarely |
-| `<project>-status.md` | Current state only, topped by a **`NEXT ← RESUME HERE`** pointer | Every session |
+| `<project>-status.md` | Current state only, topped by a **`NEXT ← RESUME HERE`** pointer, plus a **Found, not approved** checklist for things noticed on the way | Every session |
 | `<project>-decisions.md` | Numbered decisions: locked, open, rejected — each dated with its reason | When a decision is made |
 | `<project>-changelog.md` | Append-only dated history of what was done | Every session that changes the project |
 
@@ -125,7 +125,7 @@ Each file has one job, and they link to each other instead of repeating content.
 1. **Open `-status.md` first.** The NEXT pointer tells you exactly where to continue — no re-reading old threads, no "where was I?".
 2. **Check `-decisions.md`** before revisiting any choice. A recorded decision is settled; you never re-argue it from scratch.
 3. **Do the work.**
-4. **Before stopping:** rewrite the status (new NEXT pointer, anything half-done), record any decision made, append one changelog line.
+4. **Before stopping:** rewrite the status (new NEXT pointer, anything half-done), add anything you noticed but did not do to its Found checklist, record any decision made, append one changelog line.
 
 The test of a good status file: **a person who has never seen the project reads it and can continue the work with zero questions.** If that isn't true, update it before you stop. This is what makes interruptions cheap — a project paused for three weeks resumes in minutes, whether it's you returning or an AI assistant picking it up fresh.
 
