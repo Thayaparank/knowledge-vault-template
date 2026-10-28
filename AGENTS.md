@@ -27,6 +27,9 @@ Every file should still be useful 12 months from now.
 |---|---|---|
 | `raw/` | Immutable inbox. Original documents, notes, conversations — the audit trail. | **Read-only** for the assistant. The owner adds files; nobody edits history. |
 | `wiki/` | Curated, distilled knowledge. One concept per page. The retrieval layer. | **Editable** — improved over time |
+| `wiki/lessons/` | Problem → cause → solution entries. | Editable |
+| `wiki/methods/` | Reusable procedures, checklists, recipes. | Editable |
+| `wiki/troubleshooting/` | Symptom → likely cause → check → fix flows. | Editable |
 | `wiki/decisions/` | Decision records — one decision per page, with the options that were rejected. | Editable |
 | `wiki/prompts/` | Reusable, parameterized prompts that earned their place by being used more than once. | Editable |
 | `wiki/projects/` | Per-project hub + status + decisions + changelog files. | Editable |
@@ -71,7 +74,7 @@ When new material lands in `raw/`:
 
 1. **Read the raw source.** Do not modify it.
 2. **Classify it** into one of the wiki categories (`lessons`, `methods`, `troubleshooting`, `decisions`, `prompts`, `projects` — or the ones you renamed them to).
-3. **Check the wiki first.** If a page on the concept exists → extend it; never create a duplicate. If none exists → create one from the matching file in `templates/`.
+3. **Check the wiki first.** If a page on the concept exists → extend it; never create a duplicate. If none exists → create one from the matching file in `templates/`: `lesson-template.md` (lessons), `method-template.md` (methods), `troubleshooting-template.md` (troubleshooting), `decision-record-template.md` (decisions), `ai-prompt-template.md` (prompts).
 4. **Distill, don't copy.** Extract the reusable lesson — cause, resolution, principle. Strip incidental detail.
 5. **Cite the raw source** at the bottom of the page.
 6. **Cross-link** to related pages (or note that none exist yet).
@@ -98,6 +101,8 @@ When resuming a project, read these first if they exist — they are the authori
 - `wiki/projects/<project>-changelog.md` — append-only history; one dated line per session that changes the project.
 
 The hub (`wiki/projects/<project>.md`) holds the stable reference: background, key facts, links. Volatile state never goes in the hub.
+
+Start a new project's four files from `templates/project-hub-template.md`, `project-status-template.md`, `project-decisions-template.md` and `project-changelog-template.md`, in the project's first session.
 
 ---
 
