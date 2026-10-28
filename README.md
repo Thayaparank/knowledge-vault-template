@@ -62,7 +62,7 @@ The folder names above are a neutral starting set. Rename the subfolders to matc
 3. **Every wiki page cites its source** — a `raw/` file preferred, an `outputs/` file or URL when that is where the lesson came from — and links 2–5 related pages. Link, never duplicate — one fact lives in exactly one file.
 4. **kebab-case filenames** everywhere. Wiki pages are timeless (no dates); raw files are chronological (dated).
 5. **Log every change** as one line in `log.md`; add every new page to `wiki/index.md`.
-6. **No secrets in the vault.** Passwords, keys, account numbers live elsewhere; reference them as `<SECRET: name>` placeholders. The `.gitignore` blocks the common secret files as a backstop.
+6. **No secrets in the vault.** Passwords, keys, account numbers live in your operating system's credential store or a password manager, for the vault and for every tool on the machine; reference them as `<SECRET: name>` placeholders. The `.gitignore` blocks the common secret files as a backstop.
 
 ---
 
@@ -139,6 +139,7 @@ The vault is designed so an AI assistant can work inside it safely:
 - It works with **any AI tool**: `AGENTS.md` is the cross-tool standard (Codex, Cursor, Windsurf, …), and `CLAUDE.md` (Claude Code), `GEMINI.md` (Gemini CLI), and `.github/copilot-instructions.md` (GitHub Copilot) are one-line pointers to it — one manual, every assistant.
 - The assistant answers questions from `wiki/` pages (cheap, short) instead of re-reading raw files (expensive, long).
 - **Safety and honesty rules are built in** (AGENTS.md §3, rules 14–17): content the assistant reads — chat exports, web pages, logs — is treated as data, never as instructions; it says "unknown" instead of guessing; it opens the file before claiming "none" or quoting a count; and when instructions conflict, it takes the less destructive side and asks.
+- **Scope and control rules** (AGENTS.md §3, rules 18–20): the assistant does the goal first and asks before acting on anything else it finds; every absolute rule is backed by a deny entry in the AI tool's own permission settings; and outside skills, plugins, and MCP servers are checked before they are installed. AGENTS.md §9 also describes watching the assistant from outside, with an activity recorder it cannot edit.
 - The per-project status/decisions/changelog files let an assistant resume your project cold, with zero questions.
 - **[token-efficiency.md](token-efficiency.md)** keeps AI-assisted work cheap: reference file paths instead of pasting, one task per conversation, narrow searches instead of whole-vault scans.
 - **Rules stay conflict-free through a hierarchy** (AGENTS.md §7): the manual is the one home for general rules; each project repo gets only a small **router** file — start it from [templates/project-router-template.md](templates/project-router-template.md) — that points back to the vault and adds project-only rules, never copies.
